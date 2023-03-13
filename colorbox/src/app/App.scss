@@ -1,0 +1,43 @@
+@use "src/index.scss" as *;
+
+.show-one-color,
+.get-my-colors{
+  border: 1px solid $watermelonGrayCreep;
+  border-radius: .2rem;
+  color: $watermelonGrayCreep;
+}
+
+.show-one-color:hover,
+.get-my-colors:hover{
+  background-color: $cerealMilk;
+  border-radius: .2rem;
+  border-color: 1px solid $watermelonDark;
+  color: $watermelonGrayCreep;
+}
+
+.show-one-color:active,
+.get-my-colors:active{
+  background-color: $orangey;
+  border-color: $watermelonDark;
+  color: $watermelonDark;
+}
+
+.random-color-box{
+  background-color: $whiteGrayPurple;
+  border: 1px solid $watermelon;
+  border-radius: .1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .3rem;
+  width: 7rem;
+}
+
+.show-one-color{
+  width: 5rem;
+}
+
+.grid-box {
+  //this is my utility class, "stacked"
+  display: grid;
+}

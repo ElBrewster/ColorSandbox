@@ -1,0 +1,8 @@
+@use "src/index.scss" as *;
+
+.color-box {
+    aspect-ratio: 1 / 1;
+    border: 1px solid $watermelonGrayCreep;
+    border-radius: .1rem;
+    width: 5rem;
+}

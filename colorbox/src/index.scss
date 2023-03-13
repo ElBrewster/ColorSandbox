@@ -1,0 +1,92 @@
+$watermelon: rgb(236, 47, 90);
+$cerealMilk: rgb(249, 216, 235);
+$whitePink: rgb(255, 239, 251);
+$chrysanthemumYellow: rgb(244, 228, 0);
+$chrysanthemumWhite: rgb(252, 248, 202);
+
+$peachyYellow: rgb(237, 181, 13);
+$orangey: rgb(233, 151, 16);
+$watermelonGrayCreep: rgb(134, 26, 51);
+$watermelonDark: rgb(75, 15, 29);
+$watermelonDarker: rgb(28, 6, 11);
+
+$grayPurple:rgb(110, 108, 123);
+$whiteGrayPurple:rgb(195, 192, 219);
+
+
+//Andy Bell's CSS reset:
+*,
+*::before,
+*::after {
+   box-sizing: border-box; 
+}
+
+body, 
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, 
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: $chrysanthemumWhite;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $watermelonDarker;
+}
+
+//1em is generally default 16px, and font size is inherited from parent and multiplied
+//rem stands for root em, which looks at the html (or ::root)
+//rem units are more consistent because they look at the root
