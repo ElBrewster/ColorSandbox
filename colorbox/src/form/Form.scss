@@ -11,6 +11,7 @@
     padding: .3rem;
 }
 
+//---Input-Styling----
 .hex-input-label{
     font-size: 1.4rem;
 }
@@ -22,14 +23,18 @@
     
     max-width: 4rem;
 }
+
 input, select, textarea {
   color: $watermelon;
 }
+
 .color-input::placeholder{
     color: $watermelonGrayCreep;
     font-weight: 300, 1;
     opacity: .6;
 }
+
+//---Submit-Button----
 .submit-button {
   border: 1px solid $watermelonGrayCreep;
   border-radius: .2rem;

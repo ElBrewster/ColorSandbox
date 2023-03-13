@@ -7,14 +7,18 @@ export default function Form() {
     function handleSubmit(e) {
         e.preventDefault();
         // we want to submit this: {id: Date.Now(), hex:""}
-        console.log("inputColor: ", inputColor)
+        if((inputColor.hex.length === 3) || (inputColor.hex.length === 6)) {
+            console.log("inputColor.hex.length: ", inputColor.hex)
+
+        }
+
     }
     
     function handleChange(e) {
-        console.log(e.target.value)
         const result = e.target.value.replace(/[^a-z0-9]/gi, "");
         setInputColor({hex: result})
     } 
+
 
     return(
         <form className="my-form" onSubmit={handleSubmit}>
@@ -33,7 +37,7 @@ export default function Form() {
                     value={inputColor.hex}
                 />
             </div>
-            <button className="submit-button">Add One</button>
+            <button className="submit-button" >Add One</button>
         </form>
     );
 }
