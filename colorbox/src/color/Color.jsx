@@ -12,11 +12,10 @@ export default function Color({color}) {
     const handleClick = () => {
         setMyClick(prevClick => !prevClick);
 
-        if(myHover && !myClick) {
+        if((myHover && !myClick) || (!myHover && myClick)) {
             setMyHover(true)
         }
     }
-
 
     const handleMouseEnter = () => {
         if(myClick){
@@ -26,7 +25,6 @@ export default function Color({color}) {
     }
 
     const handleMouseLeave = () => {
-        // console.log("mouse leave: ", color);
         setMyHover(false);
     }
 
