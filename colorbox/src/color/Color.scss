@@ -8,7 +8,5 @@
 }
 
 .color-box:hover{
-    grid-row: span 2;
-    grid-column: span 2;
-    max-width: 10rem;
+    border: 3px solid $watermelonDark;
 }

@@ -19,8 +19,6 @@ export default function Window(){
         window.addEventListener("resize", () => setWindowWidth(window.innerWidth))
     }, [windowWidth])
 
-    console.log("window height", windowHeight)
-    console.log("window width", windowWidth)
     return(
         <section className="window-size-box">
             <h4 className="sizer">Window Sizer Checker</h4>

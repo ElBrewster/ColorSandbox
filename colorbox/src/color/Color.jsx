@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Color.scss";
 
 export default function Color({color}) {
-    const defaultColor = "#1e9bf0";
+    const [myHover, setMyHover] = useState(false);
+    const [myClick, setMyClick] = useState(false);
 
+    const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
+    const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
 
-    function handleMouseOver(){
-        console.log("oh waoh mouse over");
-        //change the color hex in some way using JavaScript string handling. Maybe just reverse it?
-        //you could do so many things with this, reverse, add 2, RGB converter and make a value 0 (or figure out the hex rgb relationship)
+    const handleClick = () => {
+        setMyClick(prevClick => !prevClick);
+
+        if((myHover && !myClick) || (!myHover && myClick)) {
+            setMyHover(true)
+        }
+    }
+
+    const handleMouseEnter = () => {
+        if(myClick){
+            return;
+        }
+        setMyHover(true);
+    }
+
+    const handleMouseLeave = () => {
+        setMyHover(false);
     }
 
     return(
-        <section className="color-box stacked" onMouseOver={handleMouseOver} style={{backgroundColor: color ? color :"#09c"}}>
-            {/* style={{display: preprocessCSS.color ? "block" : "none"}} */}
-
-        </section>
+        <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color :"#09c"}}>
+            {toggleHexOnClick}
+            {toggleHexOnHover}
+        </div>
     );
 }
+
+//keep track of what you want to show up and when you want it to show up
+//conditional rendering
+//could do a toggle that happens with the click
+//the this && this conditional rendering
