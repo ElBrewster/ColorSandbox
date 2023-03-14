@@ -3,6 +3,7 @@ import './App.scss';
 import Color from "../color/Color";
 import colorData from "../data";
 import Form from '../form/Form';
+import Window from '../window/Window';
 
 function App() {
   const [myColorData, setCount] = useState(colorData);
@@ -32,6 +33,9 @@ function App() {
         </div>
         <div className="form-container">
           <Form />
+        </div>
+        <div className="window-container">
+          <Window />
         </div>
       </div>
       <div className="my-paint-box">

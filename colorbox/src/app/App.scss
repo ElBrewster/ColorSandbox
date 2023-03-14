@@ -9,15 +9,15 @@
 .show-one-color,
 .get-my-colors{
   border: 1px solid $watermelonGrayCreep;
-  border-radius: .2rem;
+  border-radius: $biggerBorderRadius;
   color: $watermelonGrayCreep;
 }
 
 .show-one-color:hover,
 .get-my-colors:hover{
   background-color: $cerealMilk;
-  border-radius: .2rem;
-  border-color: 1px solid $watermelonDark;
+  border-radius: $biggerBorderRadius;
+  border-color: $darkestBorder;
   color: $watermelonGrayCreep;
 }
 
@@ -30,7 +30,7 @@
 
 .random-color-box{
   background-color: $whiteGrayPurple;
-  border: 1px solid $watermelon;
+  border: $pinkBorder;
   border-radius: .1rem;
   display: flex;
   flex-direction: column;
