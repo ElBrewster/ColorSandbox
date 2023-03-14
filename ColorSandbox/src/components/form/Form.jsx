@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Form.scss";
+import { nanoid } from "nanoid";
 
 export default function Form({setUserAddedColors}) {
     const [inputColor, setInputColor] = useState("");
@@ -9,7 +10,7 @@ export default function Form({setUserAddedColors}) {
         setUserAddedColors(prevState => {
             return [...prevState,
                 {
-                    id: Date.now(),
+                    id: nanoid(),
                     hex: inputColor
                 }
             ];
