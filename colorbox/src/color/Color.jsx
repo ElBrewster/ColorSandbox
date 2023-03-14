@@ -13,7 +13,7 @@ export default function Color({color}) {
     }
 
     return(
-        <section className="color-box stacked" onMouseOver={handleMouseOver} style={{backgroundColor: color ? color :"#1e9bf0"}}>
+        <section className="color-box stacked" onMouseOver={handleMouseOver} style={{backgroundColor: color ? color :"#09c"}}>
             {/* style={{display: preprocessCSS.color ? "block" : "none"}} */}
 
         </section>

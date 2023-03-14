@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.scss';
 import Color from "../color/Color";
 import colorData from "../data";
+import Form from '../form/Form';
 
 function App() {
   const [myColorData, setCount] = useState(colorData);
@@ -24,9 +25,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className="random-color-box">
-        <button className="show-one-color" onClick={handleClickRandom}>Get One</button>
-        <Color key={randomColor.id} color={randomColor.hex}/>
+      <div className="top-container">
+        <div className="random-color-box">
+          <button className="show-one-color" onClick={handleClickRandom}>Get One</button>
+          <Color key={randomColor.id} color={randomColor.hex}/>
+        </div>
+        <div className="form-container">
+          <Form />
+        </div>
       </div>
       <div className="my-paint-box">
         <button className="get-my-colors" onClick={handleClickAll}>Get My Colors</button> 

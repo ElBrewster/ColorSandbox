@@ -1,5 +1,11 @@
 @use "src/index.scss" as *;
 
+.top-container{
+  display: flex;
+  flex-direction: row;
+}
+
+//---Buttons----
 .show-one-color,
 .get-my-colors{
   border: 1px solid $watermelonGrayCreep;

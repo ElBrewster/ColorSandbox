@@ -1,0 +1,56 @@
+@use "src/index.scss" as *;
+
+.my-form{
+    background-color: $whiteGrayBlue;
+    border: 1px solid $watermelon;
+    border-radius: .1rem;
+    color: $watermelonDark;
+    display: flex;
+    flex-direction: column;
+    min-width: 6rem;
+    padding: .3rem;
+}
+
+//---Input-Styling----
+.hex-input-label{
+    font-size: 1.4rem;
+}
+
+.color-input{
+    border-radius: .2rem;
+    border: 1px solid $watermelonGrayCreep;
+    color: 1px solid $watermelonDarker;
+    
+    max-width: 4rem;
+}
+
+input, select, textarea {
+  color: $watermelon;
+}
+
+.color-input::placeholder{
+    color: $watermelonGrayCreep;
+    font-weight: 300, 1;
+    opacity: .6;
+}
+
+//---Submit-Button----
+.submit-button {
+  border: 1px solid $watermelonGrayCreep;
+  border-radius: .2rem;
+  color: $watermelonGrayCreep;
+  width: 5rem;
+}
+
+.submit-button:hover{
+  background-color: $cerealMilk;
+  border-radius: .2rem;
+  border-color: 1px solid $watermelonDark;
+  color: $watermelonGrayCreep;
+}
+
+.submit-button:active{
+  background-color: $orangey;
+  border-color: $watermelonDark;
+  color: $watermelonDark;
+}
