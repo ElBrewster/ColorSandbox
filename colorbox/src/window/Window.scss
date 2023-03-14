@@ -1,0 +1,19 @@
+@use "src/index.scss" as *;
+
+.window-size-box{
+    background-color: $skinnyPeach;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    color: $watermelonDarker;
+    padding: $defaultPadding;
+}
+
+.window-height,
+.window-width{
+    color: $watermelonGrayCreep;
+}
+
+.px-span{
+    color: $watermelon;
+    opacity: .8;
+}
