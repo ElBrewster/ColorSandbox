@@ -7,25 +7,18 @@ export default function Color({color}) {
 
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
-    const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".7"}}>{color}</p> : null;
+    const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
 
     const handleClick = () => {
-        // console.log("clicked: ", color);
         setMyClick(prevClick => !prevClick);
-        if(myHover && myClick) {
-            setMyHover(false);
-            console.log("1. myClick, myHover :", myClick, myHover)
-            
-        }
+
         if(myHover && !myClick) {
             setMyHover(true)
-            console.log("2. myClick, myHover :", myClick, myHover)
         }
     }
-    console.log("3. myClick, myHover :", myClick, myHover)
+
 
     const handleMouseEnter = () => {
-        // console.log("mouse enter: ", color);
         if(myClick){
             return;
         }
