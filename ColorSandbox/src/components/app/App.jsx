@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.scss';
 import Color from "../color/Color"
 import colorData from  "../../data/data";
@@ -11,14 +11,20 @@ import PaintBox from '../paintbox/PaintBox';
 export default function App() {
   const [randomColor, setRandomColor] = useState("");
   const [myColorData] = useState(colorData);
-  const [userAddedColors, setUserAddedColors] = useState([])
+  const [userAddedColors, setUserAddedColors] = useState(() => JSON.parse(localStorage.getItem("userAddedColors")) || []);
+
+  console.log("userAddedColors: ", userAddedColors)
+
+  useEffect(() => {
+    localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors))
+  }, [userAddedColors])
 
   return (
     <div className="App">
       <div className="top-container">
         <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData}/>
         <div className="form-container">
-          <Form />
+          <Form setUserAddedColors={setUserAddedColors}/>
         </div>
         <div className="window-container">
           <Window />

@@ -1,1 +1,16 @@
 @use "src/index.scss" as *;
+
+.random-color-box{
+    background-color: $whiteGrayPurple;
+    border: $pinkBorder;
+    border-radius: .1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: .3rem;
+    width: 7rem;
+  }
+
+.show-one-color{
+    width: 5rem;
+}

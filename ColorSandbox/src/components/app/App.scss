@@ -6,57 +6,21 @@
 }
 
 //---Buttons----
-.show-one-color,
-.get-my-colors{
+.show-one-color {
   border: 1px solid $watermelonGrayCreep;
   border-radius: $biggerBorderRadius;
   color: $watermelonGrayCreep;
 }
 
-.show-one-color:hover,
-.get-my-colors:hover{
+.show-one-color:hover {
   background-color: $cerealMilk;
   border-radius: $biggerBorderRadius;
   border-color: $darkestBorder;
   color: $watermelonGrayCreep;
 }
 
-.show-one-color:active,
-.get-my-colors:active{
+.show-one-color:active {
   background-color: $orangey;
   border-color: $watermelonDark;
   color: $watermelonDark;
-}
-
-.random-color-box{
-  background-color: $whiteGrayPurple;
-  border: $pinkBorder;
-  border-radius: .1rem;
-  display: flex;
-  flex-direction: column;
-  gap: .2rem;
-  padding: .3rem;
-  width: 7rem;
-}
-
-.show-one-color{
-  width: 5rem;
-}
-
-.grid-box {
-  //this is my utility class, "stacked"
-  display: grid;
-  gap: .1rem;
-  grid-template-columns: 
-    repeat(auto-fit, minmax(5rem, 1fr));
-}
-
-//---Utility-Class----
-.stacked {
-  display: grid;
-}
-
-.stacked > * {
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
 }
