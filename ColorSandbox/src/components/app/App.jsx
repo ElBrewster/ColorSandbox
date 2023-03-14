@@ -6,19 +6,12 @@ import Form from '../form/Form';
 import Window from '../window/Window';
 import Header from '../header/Header';
 import RandomBox from '../randombox/RandomBox';
+import PaintBox from '../paintbox/PaintBox';
 
-function App() {
+export default function App() {
   const [randomColor, setRandomColor] = useState("");
   const [myColorData] = useState(colorData);
   const [userAddedColors, setUserAddedColors] = useState([])
-
-  const mapColors = myColorData.map(color => {
-    return <Color key={color.id} color={color.hex}/>
-  })
-
-  function handleClickAll() {
-    console.log("Get my colors!")
-  }
 
   return (
     <div className="App">
@@ -32,14 +25,7 @@ function App() {
         </div>
       </div>
       <Header />
-      <div className="my-paint-box">
-        <button className="get-my-colors" onClick={handleClickAll}>Get My Colors</button> 
-        <div className="grid-box">
-          {mapColors} 
-        </div>
-      </div>
+      <PaintBox myColorData={myColorData}/>
     </div>
-  )
+  );
 }
-
-export default App
