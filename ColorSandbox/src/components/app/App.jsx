@@ -5,10 +5,12 @@ import colorData from  "../../data/data";
 import Form from '../form/Form';
 import Window from '../window/Window';
 import Header from '../header/Header';
+import RandomBox from '../randombox/RandomBox';
 
 function App() {
-  const [myColorData, setCount] = useState(colorData);
   const [randomColor, setRandomColor] = useState("");
+  const [myColorData] = useState(colorData);
+  const [userAddedColors, setUserAddedColors] = useState([])
 
   const mapColors = myColorData.map(color => {
     return <Color key={color.id} color={color.hex}/>
@@ -18,20 +20,10 @@ function App() {
     console.log("Get my colors!")
   }
 
-  function handleClickRandom() {
-    const getOneColorNum = Math.floor(Math.random() * myColorData.length + 1);
-    const oneColor = myColorData.find(color => color.id === getOneColorNum);
-    setRandomColor(oneColor);
-    console.log("oneColor", oneColor)
-  }
-
   return (
     <div className="App">
       <div className="top-container">
-        <div className="random-color-box">
-          <button className="show-one-color" onClick={handleClickRandom}>Get One</button>
-          <Color key={randomColor.id} color={randomColor.hex}/>
-        </div>
+        <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData}/>
         <div className="form-container">
           <Form />
         </div>
