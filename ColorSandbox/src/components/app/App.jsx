@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.scss';
-import Color from "../color/Color";
-import colorData from "../data";
+import Color from "../color/Color"
+import colorData from  "../../data/data";
 import Form from '../form/Form';
 import Window from '../window/Window';
+import Header from '../header/Header';
 
 function App() {
   const [myColorData, setCount] = useState(colorData);
@@ -38,6 +39,7 @@ function App() {
           <Window />
         </div>
       </div>
+      <Header />
       <div className="my-paint-box">
         <button className="get-my-colors" onClick={handleClickAll}>Get My Colors</button> 
         <div className="grid-box">
