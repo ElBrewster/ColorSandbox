@@ -34,3 +34,11 @@
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
+
+.grid-box {
+  //this is my utility class, "stacked"
+  display: grid;
+  gap: .1rem;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(5rem, 1fr));
+}
