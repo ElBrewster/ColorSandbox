@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.scss';
-import Color from "../color/Color"
 import elColors from  "../../data/elColors";
 import basicColors1999 from '../../data/basicColors1999';
 import reallySafeColors from '../../data/reallySafeColors';
@@ -40,6 +39,7 @@ export default function App() {
         </div>
       </div>
       <Header />
+      {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
       <PaintBox myColorData={myColorData} />
       <BasicColors1999Box myBasicColors1999={myBasicColors1999} />
       <SafeBox mySafeColors={mySafeColors} />
