@@ -17,8 +17,8 @@ export default function ReallySafePaintBox({myReallySafeColors}) {
     const toggleReallySafeButtonText = clickReallySafe === true ? 'Hide "Really Safe" Colors' : 'Get "Really Safe" Colors';
 
     return (
-        <div className="really-safe-paintbox" onClick={handleClickGetReallySafeColors}>
-            <button className="get-really-safe-colors">{toggleReallySafeButtonText}</button>
+        <div className="really-safe-paintbox">
+            <button className="get-really-safe-colors" onClick={handleClickGetReallySafeColors}>{toggleReallySafeButtonText}</button>
             <div className="grid-box">
                 {showReallySafeColors}
             </div>

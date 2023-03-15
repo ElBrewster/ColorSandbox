@@ -17,8 +17,8 @@ export default function BasicColors1999Box({ myBasicColors1999 }) {
     const toggleBasicColorsButtonText = clickBasic === true ? 'Hide "Basic 1999" Colors' : 'Get "Basic 1999" Colors';
 
     return(
-        <div className="basic-paintbox" onClick={handleClickGetBasicColors}>
-            <button className="get-basic-colors">{toggleBasicColorsButtonText}</button>
+        <div className="basic-paintbox">
+            <button className="get-basic-colors" onClick={handleClickGetBasicColors}>{toggleBasicColorsButtonText}</button>
             <div className="grid-box">
                 {showMyBasicColors}
             </div>
