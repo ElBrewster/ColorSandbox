@@ -10,7 +10,7 @@ export default function PaintBox({myColorData}) {
     }
     
     const mapColors = myColorData.map(color => {
-        return <Color key={color.id} color={color.hex}/>
+        return <Color key={color.id} color={color.hex} />
     });
 
     const showPaintBox = clickPaintBox === true ? mapColors : "";
@@ -22,6 +22,6 @@ export default function PaintBox({myColorData}) {
             <div className="grid-box">
                 {showPaintBox} 
             </div>
-      </div>
+        </div>
     );
 }

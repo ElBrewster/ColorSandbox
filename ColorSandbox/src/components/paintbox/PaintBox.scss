@@ -1,13 +1,5 @@
 @use "src/index.scss" as *;
 
-.grid-box {
-    //this is my utility class, "stacked"
-    display: grid;
-    gap: .1rem;
-    grid-template-columns: 
-      repeat(auto-fit, minmax(5rem, 1fr));
-}
-
 .get-my-colors {
     border: 1px solid $watermelonGrayCreep;
     border-radius: $biggerBorderRadius;
