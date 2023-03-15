@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import "./Form.scss";
+import { nanoid } from "nanoid";
 
-export default function Form() {
-    const [inputColor, setInputColor] = useState({hex: ""});
-//need regex [a-z] \d
+export default function Form({setUserAddedColors}) {
+    const [inputColor, setInputColor] = useState("");
+
     function handleSubmit(e) {
         e.preventDefault();
-        // we want to submit this: {id: Date.Now(), hex:""}
-        if((inputColor.hex.length === 3) || (inputColor.hex.length === 6)) {
-            console.log("inputColor.hex.length: ", inputColor.hex)
-//maybe ignore the 3 character option and hope that people who know about that will also to double them to their 6 character equivalent
-        }
-
+        setUserAddedColors(prevState => {
+            return [...prevState,
+                {
+                    id: nanoid(),
+                    hex: inputColor
+                }
+            ];
+        })
     }
     
     function handleChange(e) {
         const result = e.target.value.replace(/[^a-z0-9]/gi, "");
-        setInputColor({hex: result})
+        setInputColor(result)
     } 
-
 
     return(
         <form className="my-form" onSubmit={handleSubmit}>
@@ -34,7 +36,7 @@ export default function Form() {
                     pattern="[a-zA-Z0-9-]+" required
                     className="color-input" 
                     onChange={handleChange}
-                    value={inputColor.hex}
+                    value={inputColor}
                 />
             </div>
             <button className="submit-button" >Add One</button>
