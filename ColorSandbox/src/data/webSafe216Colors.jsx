@@ -1,4 +1,4 @@
-const webSafe216 = [
+const webSafe216Colors = [
     {
         id: 300,
         hex: "000"
@@ -865,4 +865,4 @@ const webSafe216 = [
     }
 ];
 
-export default webSafe216;
+export default webSafe216Colors;

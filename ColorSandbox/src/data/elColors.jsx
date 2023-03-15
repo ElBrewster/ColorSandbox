@@ -1,4 +1,4 @@
-const colorData = [
+const elColors = [
     {
         id: 1,
         hex: "#EC7775"
@@ -121,4 +121,4 @@ const colorData = [
     }
 ];
 
-export default colorData;
+export default elColors;

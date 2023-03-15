@@ -22,6 +22,6 @@ export default function PaintBox({myColorData}) {
             <div className="grid-box">
                 {showPaintBox} 
             </div>
-      </div>
+        </div>
     );
 }

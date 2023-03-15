@@ -83,4 +83,4 @@ const basicColors1999 = [
 
 ];
 
-export default basicColors;
+export default basicColors1999;
