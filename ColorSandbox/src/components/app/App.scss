@@ -24,3 +24,13 @@
   border-color: $watermelonDark;
   color: $watermelonDark;
 }
+
+//---Utility-Class----
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
