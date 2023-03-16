@@ -11,7 +11,7 @@ import RandomBox from '../randombox/RandomBox';
 import PaintBox from '../paintbox/PaintBox';
 import ReallySafePaintBox from '../reallysafebox/ReallySafePaintBox';
 import SafeBox from '../safebox/SafeBox';
-import BasicColors1999Box from '../basic/BasicColors1999Box';
+import BasicColors1999Box from '../basicbox/BasicColors1999Box';
 
 export default function App() {
   const [randomColor, setRandomColor] = useState("");
