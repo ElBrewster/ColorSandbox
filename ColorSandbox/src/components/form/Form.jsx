@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import "./Form.scss";
 import { nanoid } from "nanoid";
+import Color from "../color/Color";
 
 export default function Form({setUserAddedColors}) {
     const [inputColor, setInputColor] = useState("");
+    const [submittedColor, setSubmittedColor] = useState("");
 
-    // const displaySubmission = <Color inputColor={inputColor}/>
     function handleSubmit(e) {
         e.preventDefault();
-         
+        const hashHex = "#" + inputColor;
+        const newColor = {id: nanoid(), hex: hashHex};
+        setSubmittedColor(newColor);
         setUserAddedColors(prevState => {
-            return [...prevState,
-                {
-                    id: nanoid(),
-                    hex: inputColor
-                }
-            ];
+            return [...prevState, newColor];
         });
+        clearInput();
     }
-    
+
     function handleChange(e) {
         const result = e.target.value.replace(/[^a-z0-9]/gi, "");
         setInputColor(result)
     } 
+
+    function clearInput() {
+        console.log("")
+    }
 
     return(
         <div className="form-container">
@@ -43,10 +46,10 @@ export default function Form({setUserAddedColors}) {
                     />
                 </div>
                 <button className="submit-button">Add One</button>
+                <div className="color-preview">
+                    <Color id={submittedColor.id} color={submittedColor.hex}/>
+                </div>
             </form>
-            <div className="color-preview">
-
-            </div>
         </div>
     );
 }

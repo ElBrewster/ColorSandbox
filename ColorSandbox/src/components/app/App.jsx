@@ -12,6 +12,7 @@ import PaintBox from '../paintbox/PaintBox';
 import ReallySafePaintBox from '../reallysafebox/ReallySafePaintBox';
 import SafeBox from '../safebox/SafeBox';
 import BasicColors1999Box from '../basicbox/BasicColors1999Box';
+import SandBox from '../sandbox/SandBox';
 
 export default function App() {
   const [randomColor, setRandomColor] = useState("");
@@ -19,6 +20,7 @@ export default function App() {
   const [myBasicColors1999] = useState(basicColors1999);
   const [mySafeColors] = useState(webSafe216Colors);
   const [myReallySafeColors] = useState(reallySafeColors);
+
   const [userAddedColors, setUserAddedColors] = useState(() => JSON.parse(localStorage.getItem("userAddedColors")) || []);
 
   console.log("userAddedColors: ", userAddedColors)
@@ -27,17 +29,19 @@ export default function App() {
     localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors))
   }, [userAddedColors])
 
+
   return (
     <div className="App">
       <div className="top-container">
         <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData}/>
         <div className="form-container">
-          <Form setUserAddedColors={setUserAddedColors}/>
+          <Form userAddedColors={userAddedColors} setUserAddedColors={setUserAddedColors}/>
         </div>
         <div className="window-container">
           <Window />
         </div>
       </div>
+      <SandBox userAddedColors={userAddedColors}/>
       <Header />
       {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
       <PaintBox myColorData={myColorData} />
