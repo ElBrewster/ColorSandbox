@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BiGhost } from "react-icons/bi";
+//how do display something when no color is rendered? for boo box?
 import "./Color.scss";
 
 export default function Color({color}) {
@@ -29,7 +31,7 @@ export default function Color({color}) {
     }
 
     return(
-        <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color :"#09c"}}>
+        <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC"}}>
             {toggleHexOnClick}
             {toggleHexOnHover}
         </div>
