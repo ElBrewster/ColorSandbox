@@ -41,7 +41,7 @@ export default function App() {
           <Window />
         </div>
       </div>
-      <SandBox userAddedColors={userAddedColors}/>
+      <SandBox userAddedColors={userAddedColors} setUserAddedColors={setUserAddedColors}/>
       <Header />
       {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
       <PaintBox myColorData={myColorData} />
