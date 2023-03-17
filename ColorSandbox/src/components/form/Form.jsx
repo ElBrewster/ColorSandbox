@@ -28,7 +28,6 @@ export default function Form({setUserAddedColors}) {
     }
 
     return(
-        <div className="form-container">
             <form className="my-form" onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label htmlFor="hex" className="hex-input-label">#&nbsp;</label>
@@ -50,6 +49,5 @@ export default function Form({setUserAddedColors}) {
                     <Color id={submittedColor.id} color={submittedColor.hex}/>
                 </div>
             </form>
-        </div>
     );
 }

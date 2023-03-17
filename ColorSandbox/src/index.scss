@@ -27,7 +27,7 @@ $darkerBorder: 1px solid $watermelonGrayCreep;
 $pinkBorder: 1px solid $watermelon;
 $smallBorderRadius: .1rem;
 $biggerBorderRadius: .2rem;
-$defaultPadding: .3rem;
+$defaultPadding: .3em;
 
 
 //Andy Bell's CSS reset:
@@ -122,6 +122,25 @@ button:active{
   color: $watermelonDark;
 }
 
+//---Media-Queries----
+
+@media (max-width: 199px) {
+  button {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 181px) {
+  button {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 152px) {
+  button {
+    font-size: .6rem;
+  }
+}
 //1em is generally default 16px, and font size is inherited from parent and multiplied
 //rem stands for root em, which looks at the html (or ::root)
 //rem units are more consistent because they look at the root

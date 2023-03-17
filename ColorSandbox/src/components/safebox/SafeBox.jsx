@@ -16,7 +16,7 @@ export default function SafeBox({mySafeColors}) {
     const showMySafeColors = clickSafe === true ? mapSafeColors : "";
     const toggleSafeColorsButtonText = clickSafe === true ? 'Hide "Safe" Colors' : 'Get "Safe" Colors';
     return(
-        <div className="really-safe-paintbox">
+        <div className="safe-paintbox">
             <button className="get-really-safe-colors" onClick={handleClickGetSafeColors}>{toggleSafeColorsButtonText}</button>
             <div className="grid-box">
                 {showMySafeColors}

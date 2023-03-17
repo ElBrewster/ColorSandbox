@@ -33,21 +33,25 @@ export default function App() {
   return (
     <div className="App">
       <div className="top-container">
-        <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData}/>
-        <div className="form-container">
+        <div className="random-color-wrapper">
+          <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData}/>  
+        </div>
+        <div className="form-wrapper">
           <Form userAddedColors={userAddedColors} setUserAddedColors={setUserAddedColors}/>
         </div>
-        <div className="window-container">
+        <div className="window-sizer-wrapper">
           <Window />
         </div>
       </div>
       <SandBox userAddedColors={userAddedColors} setUserAddedColors={setUserAddedColors}/>
       <Header />
       {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
-      <PaintBox myColorData={myColorData} />
-      <BasicColors1999Box myBasicColors1999={myBasicColors1999} />
-      <ReallySafePaintBox myReallySafeColors={myReallySafeColors} />
-      <SafeBox mySafeColors={mySafeColors} />
+      <div className="color-boxes-wrapper">
+        <PaintBox myColorData={myColorData} />
+        <BasicColors1999Box myBasicColors1999={myBasicColors1999} />
+        <ReallySafePaintBox myReallySafeColors={myReallySafeColors} />
+        <SafeBox mySafeColors={mySafeColors} />
+      </div>
     </div>
   );
 }

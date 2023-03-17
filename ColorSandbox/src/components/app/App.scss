@@ -1,8 +1,17 @@
 @use "src/index.scss" as *;
 
+.App {
+  margin: .5em;
+}
+
 .top-container{
   display: flex;
   flex-direction: row;
+  gap: .5rem
+}
+
+.color-boxes-wrapper {
+  background-color: #cef;
 }
 
 //---Utility-Class----
@@ -22,3 +31,26 @@
   grid-template-columns: 
     repeat(auto-fit, minmax(5rem, 1fr));
 }
+
+//---Media-Queries----
+@media (max-width: 300px) {
+  .top-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-wrapper,
+  .random-color-wrapper {
+    max-width: 120px;
+  }
+   
+  .window-sizer-wrapper {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 156px) {
+  .window-sizer-wrapper {
+    font-size: .9rem;
+  }
+}
+
