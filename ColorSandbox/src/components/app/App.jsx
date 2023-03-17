@@ -46,8 +46,8 @@ export default function App() {
       {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
       <PaintBox myColorData={myColorData} />
       <BasicColors1999Box myBasicColors1999={myBasicColors1999} />
-      <SafeBox mySafeColors={mySafeColors} />
       <ReallySafePaintBox myReallySafeColors={myReallySafeColors} />
+      <SafeBox mySafeColors={mySafeColors} />
     </div>
   );
 }
