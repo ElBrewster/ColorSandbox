@@ -4,9 +4,35 @@
     aspect-ratio: 1 / 1;
     border: $darkerBorder;
     border-radius: $smallBorderRadius;
+    display: flex;
+    flex-direction: row-reverse;
     max-width: 5rem;
 }
 
 .color-box:hover{
     border: 3px solid $watermelonDark;
 }
+
+
+.play-button {
+    background-color: inherit;
+    border: none;
+    height: 1rem;
+    padding: 0;
+    width: 1rem;
+}
+
+.play-button-icon {
+    color: $watermelon;
+    display: block;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 1rem;
+}
+
+
+// .play-button:checked {
+//     color: red;
+// }
+//maybe add this "checked" functionality with a boolean?

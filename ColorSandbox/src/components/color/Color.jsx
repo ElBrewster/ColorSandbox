@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { BiGhost } from "react-icons/bi";
+import { TbMoodSadDizzy, TbPlayerStopFilled, TbPlayerStop } from "react-icons/tb"
+// import { IoPlayCircleOutline, IoPlayCircle } from "react-icons/io";
+import { CgDisplayGrid } from "react-icons/cg";
 //how do display something when no color is rendered? for boo box?
 import "./Color.scss";
 
@@ -32,6 +35,7 @@ export default function Color({color}) {
 
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC"}}>
+            <button className="play-button"><BiGhost className="play-button-icon"/></button>
             {toggleHexOnClick}
             {toggleHexOnHover}
         </div>
