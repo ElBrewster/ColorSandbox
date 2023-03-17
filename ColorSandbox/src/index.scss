@@ -103,6 +103,25 @@ body {
   color: $watermelonDarker;
 }
 
+button {
+  border: $darkerBorder;
+  border-radius: $biggerBorderRadius;
+  color: $watermelonGrayCreep;
+}
+
+button:hover{
+  background-color: $cerealMilk;
+  border-radius: $biggerBorderRadius;
+  border-color: $darkestBorder;
+  color: $watermelonGrayCreep;
+}
+
+button:active{
+  background-color: $orangey;
+  border-color: $watermelonDark;
+  color: $watermelonDark;
+}
+
 //1em is generally default 16px, and font size is inherited from parent and multiplied
 //rem stands for root em, which looks at the html (or ::root)
 //rem units are more consistent because they look at the root

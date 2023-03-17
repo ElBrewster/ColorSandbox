@@ -5,26 +5,6 @@
   flex-direction: row;
 }
 
-//---Buttons----
-.show-one-color {
-  border: 1px solid $watermelonGrayCreep;
-  border-radius: $biggerBorderRadius;
-  color: $watermelonGrayCreep;
-}
-
-.show-one-color:hover {
-  background-color: $cerealMilk;
-  border-radius: $biggerBorderRadius;
-  border-color: $darkestBorder;
-  color: $watermelonGrayCreep;
-}
-
-.show-one-color:active {
-  background-color: $orangey;
-  border-color: $watermelonDark;
-  color: $watermelonDark;
-}
-
 //---Utility-Class----
 .stacked {
   display: grid;

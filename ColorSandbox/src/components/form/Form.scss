@@ -36,21 +36,18 @@ input, select, textarea {
 
 //---Submit-Button----
 .submit-button {
-  border: $darkerBorder;
-  border-radius: $biggerBorderRadius;
-  color: $watermelonGrayCreep;
   width: 5rem;
 }
 
-.submit-button:hover{
-  background-color: $cerealMilk;
-  border-radius: .2rem;
-  border-color: $darkestBorder;
-  color: $watermelonGrayCreep;
-}
+// .submit-button:hover{
+//   background-color: $cerealMilk;
+//   border-radius: .2rem;
+//   border-color: $darkestBorder;
+//   color: $watermelonGrayCreep;
+// }
 
-.submit-button:active{
-  background-color: $orangey;
-  border-color: $watermelonDark;
-  color: $watermelonDark;
-}
+// .submit-button:active{
+//   background-color: $orangey;
+//   border-color: $watermelonDark;
+//   color: $watermelonDark;
+// }
