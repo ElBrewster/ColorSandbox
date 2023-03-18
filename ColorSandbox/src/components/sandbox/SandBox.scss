@@ -1,5 +1,13 @@
 @use "src/index.scss" as *;
 
+.sandbox {
+    background-color: $carefreeBlue;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    margin-top: .2rem;
+    padding: .3rem;
+}
+
 .delete-my-colors {
     margin-top: .5rem;
 }

@@ -47,7 +47,7 @@ export default function Color({color}) {
         </div>
     );
 }
-{/* <BiGhost className="play-button-icon"/> */}
+
 //keep track of what you want to show up and when you want it to show up
 //conditional rendering
 //could do a toggle that happens with the click
