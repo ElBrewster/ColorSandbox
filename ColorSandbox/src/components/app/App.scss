@@ -4,14 +4,16 @@
   margin: .5em;
 }
 
-.top-container{
+.top-container {
   display: flex;
   flex-direction: row;
   gap: .5rem
 }
 
 .color-boxes-wrapper {
-  background-color: #cef;
+  display: grid;
+  gap: .5rem
+
 }
 
 //---Utility-Class----

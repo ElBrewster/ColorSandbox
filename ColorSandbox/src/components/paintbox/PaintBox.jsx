@@ -14,7 +14,7 @@ export default function PaintBox({myColorData}) {
     });
 
     const showPaintBox = clickPaintBox === true ? mapColors : "";
-    const toggleButtonText = clickPaintBox === true ? "Hide PaintBox" : "Get PaintBox";
+    const toggleButtonText = clickPaintBox === true ? "Hide El's PaintBox" : "Get El's PaintBox";
     
     return(
         <div className="my-paint-box">
