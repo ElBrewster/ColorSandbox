@@ -9,6 +9,7 @@ import "./Color.scss";
 export default function Color({color}) {
     const [myHover, setMyHover] = useState(false);
     const [myClick, setMyClick] = useState(false);
+    const [ghostClick, setMyGhostClick] = useState(false);
 
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
@@ -35,11 +36,12 @@ export default function Color({color}) {
 
     const handleButtonClick = (e) => {
         e.stopPropagation();
+        setMyGhostClick(prevState => !prevState);
     }
-    
+
     return(
-        <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC"}}>
-            <button className="play-button"><BiGhost className="play-button-icon" onClick={handleButtonClick}/></button>
+        <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC", color: ghostClick ? "#FFFFFF" : "inherit"}}>
+            <button className="ghost-button" onClick={handleButtonClick}><BiGhost className="ghost-button-icon" style={{color: ghostClick ? "#FFFFFF" : "inherit"}}/></button>
             {toggleHexOnClick}
             {toggleHexOnHover}
         </div>
