@@ -33,15 +33,19 @@ export default function Color({color}) {
         setMyHover(false);
     }
 
+    const handleButtonClick = (e) => {
+        e.stopPropagation();
+    }
+    
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC"}}>
-            <button className="play-button"><BiGhost className="play-button-icon"/></button>
+            <button className="play-button"><BiGhost className="play-button-icon" onClick={handleButtonClick}/></button>
             {toggleHexOnClick}
             {toggleHexOnHover}
         </div>
     );
 }
-
+{/* <BiGhost className="play-button-icon"/> */}
 //keep track of what you want to show up and when you want it to show up
 //conditional rendering
 //could do a toggle that happens with the click
