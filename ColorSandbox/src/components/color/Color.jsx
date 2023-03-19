@@ -46,14 +46,26 @@ export default function Color({color, id, setUserAddedColors}) {
     const handleAddClick = (e) => {
         e.stopPropagation();
         setMyAdd(prevState => !prevState);
+
         setUserAddedColors(prevColors => {
             if (!color ) {
                 return prevColors;
             }
 
+            const look = prevColors.find(prevColor => prevColor.hex === color);
+            const lookAgain = prevColors.find(prevColor => prevColor.id === id);
+
+            console.log("look: ", look)
+            if (look || lookAgain) {
+                return prevColors;
+            } else {
+                console.log("prevColors before adding new one", prevColors);
+                return [...prevColors, {id: id, hex: color}];
+            }
+
+
             //prevent dups
             //switch to minus toggle
-            return [...prevColors, {id: id, hex: color}]
         })
     }
     
