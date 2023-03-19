@@ -1,9 +1,6 @@
 import React from "react";
 import Color from "../color/Color";
 import "./SandBox.scss";
-import { TbMoodSadDizzy, TbPlayerStopFilled, TbPlayerStop } from "react-icons/tb";
-// import { IoPlayCircleOutline, IoPlayCircle } from "react-icons/io";
-import { CgDisplayGrid } from "react-icons/cg";
 
 export default function SandBox({userAddedColors, setUserAddedColors}) {
     const mySandBoxColors = userAddedColors.map(color => {

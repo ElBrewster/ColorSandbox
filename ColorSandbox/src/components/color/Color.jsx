@@ -16,7 +16,7 @@ export default function Color({color}) {
 
     const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
 
-    const toggleAddOrRemove = myAdd === true ? <button className="plus-button"><BiPlus className="plus-button-icon"/></button> : <button className="minus-button"><BiMinus className="minus-button-icon"/></button>;
+    const toggleAddOrRemove = myAdd === true ? <BiPlus className="plus-button-icon"/> : <BiMinus className="minus-button-icon"/>
 
 
     const handleClick = () => {
@@ -43,11 +43,16 @@ export default function Color({color}) {
         setMyGhostClick(prevState => !prevState);
     }
 
+    const handleAddClick = (e) => {
+        e.stopPropagation();
+        setMyAdd(prevState => !prevState);
+    }
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC", color: ghostClick ? "#FFFFFF" : "inherit"}}>
             <div className="button-container">
                 <button className="ghost-button" onClick={handleButtonClick}><BiGhost className="ghost-button-icon" style={{color: ghostClick ? "#FFFFFF" : "inherit"}}/></button>
-                {toggleAddOrRemove}
+                <button className="plus-button" onClick={handleAddClick}>{toggleAddOrRemove}</button>
+                {/* {toggleAddOrRemove} */}
             </div>
             {toggleHexOnClick}
             {toggleHexOnHover}
