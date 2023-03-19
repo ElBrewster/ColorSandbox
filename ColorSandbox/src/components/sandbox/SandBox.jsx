@@ -6,7 +6,7 @@ export default function SandBox({userAddedColors, setUserAddedColors}) {
     const [currentSandBox, setCurrentSandBox] = useState(userAddedColors);
 
     const mySandBoxColors = userAddedColors.map(color => {
-        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors} currentSandBox={currentSandBox}/>
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors} currentSandBo={currentSandBox}/>
     })
 
     function handleEmptyClick() {

@@ -17,9 +17,8 @@ export default function Color({color, id, setUserAddedColors, currentSandBox}) {
 
     const handleClick = () => {
         setMyClick(prevClick => !prevClick);
-
         if((myHover && !myClick) || (!myHover && myClick)) {
-            setMyHover(true)
+            setMyHover(true);
         }
     }
 
@@ -44,16 +43,12 @@ export default function Color({color, id, setUserAddedColors, currentSandBox}) {
     const handleAddClick = (e) => {
         e.stopPropagation();
         setMyAdd(prevState => !prevState);
-
-        
         setUserAddedColors(prevColors => {
             if (!color ) {
                 return prevColors;
             }
-            
             const look = prevColors.find(prevColor => prevColor.hex === color);
             const lookAgain = prevColors.find(prevColor => prevColor.id === id);
-            
             if (look || lookAgain) {
                 setMyAdd(false);
                 return prevColors;
@@ -62,6 +57,13 @@ export default function Color({color, id, setUserAddedColors, currentSandBox}) {
                 return [...prevColors, {id: id, hex: color}];
             }
         })
+    }
+    
+    const checkSandBoxColor = () => {
+        const check = currentSandBox.find(sandBoxColor => sandBoxColor.hex === color);
+        if ( check ) {
+            setMyAdd(false);
+        }
     }
     
     return(
