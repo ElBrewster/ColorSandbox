@@ -11,7 +11,7 @@ export default function Color({color, id, setUserAddedColors}) {
     const [myClick, setMyClick] = useState(false);
     const [ghostClick, setMyGhostClick] = useState(false);
     const [myAdd, setMyAdd] = useState(true);
-    // console.log("color prop in Color component: ", color)
+
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
     const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
@@ -46,7 +46,6 @@ export default function Color({color, id, setUserAddedColors}) {
     const handleAddClick = (e) => {
         e.stopPropagation();
         setMyAdd(prevState => !prevState);
-
         setUserAddedColors(prevColors => {
             if (!color ) {
                 return prevColors;
@@ -57,15 +56,13 @@ export default function Color({color, id, setUserAddedColors}) {
 
             console.log("look: ", look)
             if (look || lookAgain) {
+                setMyAdd(false);
                 return prevColors;
             } else {
+                setMyAdd(false);
                 console.log("prevColors before adding new one", prevColors);
                 return [...prevColors, {id: id, hex: color}];
             }
-
-
-            //prevent dups
-            //switch to minus toggle
         })
     }
     
@@ -74,7 +71,6 @@ export default function Color({color, id, setUserAddedColors}) {
             <div className="button-container">
                 <button className="ghost-button" onClick={handleButtonClick}><BiGhost className="ghost-button-icon" style={{color: ghostClick ? "#FFFFFF" : "inherit"}}/></button>
                 <button className="plus-button" onClick={handleAddClick}>{toggleAddOrRemove}</button>
-                {/* {toggleAddOrRemove} */}
             </div>
             {toggleHexOnClick}
             {toggleHexOnHover}
@@ -82,7 +78,3 @@ export default function Color({color, id, setUserAddedColors}) {
     );
 }
 
-//keep track of what you want to show up and when you want it to show up
-//conditional rendering
-//could do a toggle that happens with the click
-//the this && this conditional rendering
