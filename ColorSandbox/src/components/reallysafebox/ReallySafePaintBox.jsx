@@ -10,7 +10,7 @@ export default function ReallySafePaintBox({myReallySafeColors}) {
     }
     
     const mapReallySafeColors = myReallySafeColors.map(color => {
-        return <Color key={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} />
     })
 
     const showReallySafeColors = clickReallySafe === true ? mapReallySafeColors : "";

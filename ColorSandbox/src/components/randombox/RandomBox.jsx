@@ -16,7 +16,7 @@ export default function RandomBox({setRandomColor, myColorData, randomColor}) {
     return(
         <div className="random-color-box">
           <button className="show-one-color" onClick={handleClickRandom}>Get One</button>
-          <Color key={randomColor.id} color={randomColor.hex}/>
+          <Color key={randomColor.id} id={randomColor.id} color={randomColor.hex}/>
         </div>
     );
 }

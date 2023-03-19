@@ -47,7 +47,7 @@ export default function App() {
       <Header />
       {/* //clicked Color boxes should be saved in local storage and kept "clicked" */}
       <div className="color-boxes-wrapper">
-        <PaintBox myColorData={myColorData} />
+        <PaintBox myColorData={myColorData} setUserAddedColors={setUserAddedColors}/>
         <BasicColors1999Box myBasicColors1999={myBasicColors1999} />
         <ReallySafePaintBox myReallySafeColors={myReallySafeColors} />
         <SafeBox mySafeColors={mySafeColors} />

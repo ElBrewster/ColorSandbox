@@ -10,7 +10,7 @@ export default function SafeBox({mySafeColors}) {
     }
 
     const mapSafeColors = mySafeColors.map(color => {
-        return <Color key={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} />
     });
 
     const showMySafeColors = clickSafe === true ? mapSafeColors : "";

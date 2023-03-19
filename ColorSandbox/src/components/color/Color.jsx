@@ -6,12 +6,12 @@ import { CgDisplayGrid } from "react-icons/cg";
 //how do display something when no color is rendered? for boo box?
 import "./Color.scss";
 
-export default function Color({color}) {
+export default function Color({color, id, setUserAddedColors}) {
     const [myHover, setMyHover] = useState(false);
     const [myClick, setMyClick] = useState(false);
     const [ghostClick, setMyGhostClick] = useState(false);
     const [myAdd, setMyAdd] = useState(true);
-
+    console.log("color prop in Color component: ", color)
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
     const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
@@ -46,6 +46,9 @@ export default function Color({color}) {
     const handleAddClick = (e) => {
         e.stopPropagation();
         setMyAdd(prevState => !prevState);
+        // setUserAddedColors(prevColors => {
+        //     return [...prevColors, ]
+        // })
     }
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC", color: ghostClick ? "#FFFFFF" : "inherit"}}>
