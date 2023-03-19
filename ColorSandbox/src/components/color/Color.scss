@@ -11,7 +11,12 @@
     border: 3px solid $watermelonDark;
 }
 
-
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+.plus-button,
+.minus-button,
 .ghost-button {
     background-color: inherit;
     border: none;
@@ -29,7 +34,14 @@
     width: 1rem;
 }
 
-
+.plus-button,
+.minus-button {
+   
+}
+.plus-button-icon,
+.minus-button-icon {
+    display: block;
+}
 // .play-button:checked {
 //     color: red;
 // }

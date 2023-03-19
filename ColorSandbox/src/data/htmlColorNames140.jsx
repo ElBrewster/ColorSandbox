@@ -428,6 +428,376 @@ const htmlColorNames140 = [
         id: 1085,
         name: "Dark Sea Green",
         hex: "#8FBC8F"
+    },
+    {
+        id: 1086,
+        name: "Aquamarine",
+        hex: "#7FFFD4"
+    },
+    {
+        id: 1087,
+        name: "Medium Aquamarine",
+        hex: "#66CDAA"
+    },
+    {
+        id: 1088,
+        name: "Turquoise",
+        hex: "#40E0D0"
+    },
+    {
+        id: 1089,
+        name: "Light Tuquoise",
+        hex: "#AFE4DE"
+    },
+    {
+        id: 1090,
+        name: "Medium Turquoise",
+        hex: "#48D1CC"
+    },
+    {
+        id: 1091,
+        name: "Dark Turquoise",
+        hex: "#00CED1"
+    },
+    {
+        id: 1092,
+        name: "Pale Turquoise",
+        hex: "#AFEEEE"
+    },
+    {
+        id: 1093,
+        name: "Light Sea Green",
+        hex: "#20B2AA"
+    },
+    {
+        id: 1094,
+        name: "Light Cyan",
+        hex: "#E0FFFF"
+    },
+    {
+        id: 1095,
+        name: "Aqua/Cyan",
+        hex: "#00FFFF"
+    },
+    {
+        id: 1096,
+        name: "Dark Cyan",
+        hex: "#008B8B"
+    },
+    {
+        id: 1097,
+        name: "Teal",
+        hex: "#008080"
+    },
+    {
+        id: 1098,
+        name: "Powder Blue",
+        hex: "#B0E0E6"
+    },
+    {
+        id: 1099,
+        name: "Cadet Blue",
+        hex: "#5F9EA0"
+    },
+    {
+        id: 1100,
+        name: "Light Blue",
+        hex: "#ADD8E6"
+    },
+    {
+        id: 1101,
+        name: "Sky Blue",
+        hex: "#87CEEB"
+    },
+    {
+        id: 1102,
+        name: "Light Sky Blue",
+        hex: "#87CEFA"
+    },
+    {
+        id: 1103,
+        name: "Deep Sky Blue",
+        hex: "#00BFFF"
+    },
+    {
+        id: 1104,
+        name: "Dodger Blue",
+        hex: "#1E90FF"
+    },
+    {
+        id: 1105,
+        name: "Light Steel Blue",
+        hex: "#B0C4DE"
+    },
+    {
+        id: 1106,
+        name: "Steel Blue",
+        hex: "#4682B4"
+    },
+    {
+        id: 1107,
+        name: "Cornflower Blue",
+        hex: "#6495ED"
+    },
+    {
+        id: 1108,
+        name: "Royal Blue",
+        hex: "#4169E1"
+    },
+    {
+        id: 1109,
+        name: "Blue",
+        hex: "#0000FF"
+    },
+    {
+        id: 1110,
+        name: "Medium Blue",
+        hex: "#0000CD"
+    },
+    {
+        id: 1111,
+        name: "Dark Blue",
+        hex: "#00008B"
+    },
+    {
+        id: 1112,
+        name: "Violet Blue",
+        hex: "#324AB2"
+    },
+    {
+        id: 1113,
+        name: "Green Blue",
+        hex: "#1164B4"
+    },
+    {
+        id: 1114,
+        name: "Navy",
+        hex: "#000080"
+    },
+    {
+        id: 1115,
+        name: "Midnight Blue",
+        hex: "#191970"
+    },
+    {
+        id: 1116,
+        name: "Medium Slate Blue",
+        hex: "#7B68EE"
+    },
+    {
+        id: 1117,
+        name: "Slate Blue",
+        hex: "#6A5ACD"
+    },
+    {
+        id: 1118,
+        name: "Dark Slate Blue",
+        hex: "#483D8B"
+    },
+    {
+        id: 1119,
+        name: "Cornsilk",
+        hex: "#FFF8DC"
+    },
+    {
+        id: 1120,
+        name: "Blanched Almond",
+        hex: "#FFEBCD"
+    },
+    {
+        id: 1121,
+        name: "Bisque",
+        hex: "#FFE4C4"
+    },
+    {
+        id: 1122,
+        name: "Navajo White",
+        hex: "#FFDEAD"
+    },
+    {
+        id: 1123,
+        name: "Wheat",
+        hex: "#F5DEB3"
+    },
+    {
+        id: 1124,
+        name: "Burlywood",
+        hex: "#DEB887"
+    },
+    {
+        id: 1125,
+        name: "Tan",
+        hex: "#D2B48C"
+    },
+    {
+        id: 1126,
+        name: "Rosy Brown",
+        hex: "#BC8F8F"
+    },
+    {
+        id: 1127,
+        name: "Sandy Brown",
+        hex: "#F4A460"
+    },
+    {
+        id: 1128,
+        name: "Peru",
+        hex: "#CD853F"
+    },
+    {
+        id: 1129,
+        name: "Chocolate",
+        hex: "#D2691E"
+    },
+    {
+        id: 1130,
+        name: "Saddle Brown",
+        hex: "#8B4513"
+    },
+    {
+        id: 1131,
+        name: "Sienna",
+        hex: "#A0522D"
+    },
+    {
+        id: 1132,
+        name: "White",
+        hex: "#FFFFFF"
+    },
+    {
+        id: 1133,
+        name: "Dark White",
+        hex: "#E1D9D1"
+    },
+    {
+        id: 1134,
+        name: "Snow",
+        hex: "#FFFAFA"
+    },
+    {
+        id: 1135,
+        name: "Honeydew",
+        hex: "#F0FFF0"
+    },
+    {
+        id: 1136,
+        name: "Mint Cream",
+        hex: "#F5FFFA"
+    },
+    {
+        id: 1137,
+        name: "Azure",
+        hex: "#F0FFFF"
+    },
+    {
+        id: 1138,
+        name: "Alice Blue",
+        hex: "#F0F8FF"
+    },
+    {
+        id: 1139,
+        name: "Ghost White",
+        hex: "#F8F8FF"
+    },
+    {
+        id: 1140,
+        name: "White Smoke",
+        hex: "#F5F5F5"
+    },
+    {
+        id: 1141,
+        name: "Seashell",
+        hex: "#FFF5EE"
+    },
+    {
+        id: 1142,
+        name: "Beige",
+        hex: "#F5F5DC"
+    },
+    {
+        id: 1143,
+        name: "Old Lace",
+        hex: "#FDF5E6"
+    },
+    {
+        id: 1144,
+        name: "Floral White",
+        hex: "#FFFAF0"
+    },
+    {
+        id: 1145,
+        name: "Ivory",
+        hex: "#FFFFF0"
+    },
+    {
+        id: 1146,
+        name: "Antique White",
+        hex: "#FAEBD7"
+    },
+    {
+        id: 1147,
+        name: "Linen",
+        hex: "#FAF0E6"
+    },
+    {
+        id: 1148,
+        name: "Lavender Blush",
+        hex: "#FFF0F5"
+    },
+    {
+        id: 1149,
+        name: "Misty Rose",
+        hex: "#FFE4E1"
+    },
+    {
+        id: 1150,
+        name: "Gainsboro",
+        hex: "#DCDCDC"
+    },
+    {
+        id: 1151,
+        name: "Light Grey",
+        hex: "#D3D3D3"
+    },
+    {
+        id: 1152,
+        name: "Silver",
+        hex: "#C0C0C0"
+    },
+    {
+        id: 1153,
+        name: "Dark Gray",
+        hex: "#A9A9A9"
+    },
+    {
+        id: 1154,
+        name: "Gray",
+        hex: "#808080"
+    },
+    {
+        id: 1155,
+        name: "Dim Gray",
+        hex: "#696969"
+    },
+    {
+        id: 1156,
+        name: "Light Slate Gray",
+        hex: "#778899"
+    },
+    {
+        id: 1157,
+        name: "Slate Gray",
+        hex: "#708090"
+    },
+    {
+        id: 1158,
+        name: "Dark Slate Gray",
+        hex: "#2F4F4F"
+    },
+    {
+        id: 1159,
+        name: "Black",
+        hex: "#000000"
     }
 ];
 
