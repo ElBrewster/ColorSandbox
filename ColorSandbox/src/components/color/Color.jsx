@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BiGhost, BiPlus, BiMinus } from "react-icons/bi";
-//how do display something when no color is rendered? for boo box? Add a 'boo' button to form display that will make a list in local storage that cannot be deleted, and user is prevented from entering those combos
+//Determine whether to display something when no color is rendered? a boo box? Add a 'boo' button to form display that will make a list in local storage that cannot be deleted, and user is prevented from entering those combos
 import "./Color.scss";
 
 export default function Color({color, id, setUserAddedColors, currentSandBox}) {
@@ -10,9 +10,7 @@ export default function Color({color, id, setUserAddedColors, currentSandBox}) {
     const [myAdd, setMyAdd] = useState(true);
 
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
-
     const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
-
     const toggleAddOrRemove = myAdd === true ? <BiPlus className="plus-button-icon" style={{color: ghostClick ? "#FFFFFF" : "inherit"}}/> : <BiMinus className="minus-button-icon" style={{color: ghostClick ? "#FFFFFF" : "inherit"}}/>
 
     const handleClick = () => {
@@ -65,7 +63,7 @@ export default function Color({color, id, setUserAddedColors, currentSandBox}) {
             setMyAdd(false);
         }
     }
-    
+    //I think I need an additional way of maintaining state for the plus/minus rendering, since it's gotten complicated after I add a color to the sandbox. How do I have it recognize where it's being rendered and that a different state applies since it needs to be rendered with the toggle disabled?
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC", color: ghostClick ? "#FFFFFF" : "inherit"}}>
             <div className="button-container">

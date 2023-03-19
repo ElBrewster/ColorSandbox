@@ -12,7 +12,7 @@ export default function SandBox({userAddedColors, setUserAddedColors}) {
     function handleEmptyClick() {
         setUserAddedColors([]);
     }
-    //add remove item from local storage here? or in Color component?
+    //add functionality to remove item from local storage here? or in Color component?
     return (
         <div className="sandbox">
             <div className="grid-box">

@@ -10,7 +10,6 @@ export default function PaintBox({myColorData, setUserAddedColors}) {
     }
     
     const mapColors = myColorData.map(color => {
-        // console.log("Color in map function in PaintBox: ", color)
         return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     });
 

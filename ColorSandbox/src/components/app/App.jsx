@@ -18,20 +18,17 @@ import HTMLColors from '../htmlColorNames/HTMLColorNames';
 
 export default function App() {
   const [randomColor, setRandomColor] = useState("");
+  //add functionality to provide all available color hex data to the random color generator
   const [myColorData] = useState(elColors);
   const [myBasicColors1999] = useState(basicColors1999);
   const [mySafeColors] = useState(webSafe216Colors);
   const [myReallySafeColors] = useState(reallySafeColors);
   const [myHTMLColors] = useState(htmlColorNames140)
-
   const [userAddedColors, setUserAddedColors] = useState(() => JSON.parse(localStorage.getItem("userAddedColors")) || []);
-
-  console.log("userAddedColors: ", userAddedColors)
 
   useEffect(() => {
     localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors))
   }, [userAddedColors])
-
 
   return (
     <div className="App">

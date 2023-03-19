@@ -30,6 +30,7 @@ export default function Form({setUserAddedColors}) {
 
     function clearInput() {
         console.log("")
+//don't forget to add clear form functionality!
     }
 
     return(
