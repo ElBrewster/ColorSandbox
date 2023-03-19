@@ -46,7 +46,7 @@ export default function Form({setUserAddedColors}) {
                 </div>
                 <button className="submit-button">Add One</button>
                 <div className="color-preview">
-                    <Color key={submittedColor.id} id={submittedColor.id} color={submittedColor.hex}/>
+                    <Color key={submittedColor.id} id={submittedColor.id} color={submittedColor.hex} setUserAddedColors={setUserAddedColors}/>
                 </div>
             </form>
     );

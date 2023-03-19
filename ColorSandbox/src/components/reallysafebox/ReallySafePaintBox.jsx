@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Color from "../color/Color";
 import "./ReallySafePaintBox.scss";
 
-export default function ReallySafePaintBox({myReallySafeColors}) {
+export default function ReallySafePaintBox({myReallySafeColors, setUserAddedColors}) {
     const [clickReallySafe, setClickReallySafe] = useState(false);
 
     function handleClickGetReallySafeColors() {
@@ -10,7 +10,7 @@ export default function ReallySafePaintBox({myReallySafeColors}) {
     }
     
     const mapReallySafeColors = myReallySafeColors.map(color => {
-        return <Color key={color.id} id={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     })
 
     const showReallySafeColors = clickReallySafe === true ? mapReallySafeColors : "";

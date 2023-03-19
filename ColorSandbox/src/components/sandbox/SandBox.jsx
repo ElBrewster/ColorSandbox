@@ -4,7 +4,7 @@ import "./SandBox.scss";
 
 export default function SandBox({userAddedColors, setUserAddedColors}) {
     const mySandBoxColors = userAddedColors.map(color => {
-        return <Color key={color.id} id={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     })
 
     function handleEmptyClick() {

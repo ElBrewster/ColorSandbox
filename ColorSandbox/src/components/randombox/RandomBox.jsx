@@ -2,7 +2,7 @@ import React from "react";
 import "./RandomBox.scss";
 import Color from "../color/Color";
 
-export default function RandomBox({setRandomColor, myColorData, randomColor}) {
+export default function RandomBox({setRandomColor, myColorData, randomColor, setUserAddedColors}) {
 
 //we might need to have access to all data sets instead of just myColorData, or clarify what is randomized through UI display
 //we could pass everything here and spread it into a monster array? is that mutating state though? just map it into something new?
@@ -16,7 +16,7 @@ export default function RandomBox({setRandomColor, myColorData, randomColor}) {
     return(
         <div className="random-color-box">
           <button className="show-one-color" onClick={handleClickRandom}>Get One</button>
-          <Color key={randomColor.id} id={randomColor.id} color={randomColor.hex}/>
+          <Color key={randomColor.id} id={randomColor.id} color={randomColor.hex} setUserAddedColors={setUserAddedColors}/>
         </div>
     );
 }

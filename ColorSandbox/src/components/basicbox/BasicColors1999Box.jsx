@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Color from "../color/Color";
 import "./BasicColors1999Box.scss";
 
-export default function BasicColors1999Box({ myBasicColors1999 }) {
+export default function BasicColors1999Box({ myBasicColors1999, setUserAddedColors }) {
     const [clickBasic, setClickBasic] = useState(false);
 
     function handleClickGetBasicColors() {
@@ -10,7 +10,7 @@ export default function BasicColors1999Box({ myBasicColors1999 }) {
     }
 
     const mapBasicColors = myBasicColors1999.map(color => {
-        return <Color key={color.id} id={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     });
 
     const showMyBasicColors = clickBasic === true? mapBasicColors : "";

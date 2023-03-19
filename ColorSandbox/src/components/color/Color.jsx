@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { BiGhost, BiPlus, BiMinus } from "react-icons/bi";
 import { TbMoodSadDizzy, TbPlayerStopFilled, TbPlayerStop } from "react-icons/tb"
-// import { IoPlayCircleOutline, IoPlayCircle } from "react-icons/io";
+
 import { CgDisplayGrid } from "react-icons/cg";
-//how do display something when no color is rendered? for boo box?
+//how do display something when no color is rendered? for boo box? Add a 'boo' button to form display that will make a list in local storage that cannot be deleted, and user is prevented from entering those combos
 import "./Color.scss";
 
 export default function Color({color, id, setUserAddedColors}) {
@@ -11,7 +11,7 @@ export default function Color({color, id, setUserAddedColors}) {
     const [myClick, setMyClick] = useState(false);
     const [ghostClick, setMyGhostClick] = useState(false);
     const [myAdd, setMyAdd] = useState(true);
-    console.log("color prop in Color component: ", color)
+    // console.log("color prop in Color component: ", color)
     const toggleHexOnClick = myClick === true ? <p className="click-color-hex" style={{alignSelf: "end"}}>{color}</p> : null;
 
     const toggleHexOnHover = myHover === true ? <p className="click-color-hex" style={{alignSelf: "end", opacity: ".6"}}>{color}</p> : null;
@@ -46,10 +46,17 @@ export default function Color({color, id, setUserAddedColors}) {
     const handleAddClick = (e) => {
         e.stopPropagation();
         setMyAdd(prevState => !prevState);
-        // setUserAddedColors(prevColors => {
-        //     return [...prevColors, ]
-        // })
+        setUserAddedColors(prevColors => {
+            if (!color ) {
+                return prevColors;
+            }
+
+            //prevent dups
+            //switch to minus toggle
+            return [...prevColors, {id: id, hex: color}]
+        })
     }
+    
     return(
         <div className="color-box stacked" onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: color ? color : "#DCDCDC", color: ghostClick ? "#FFFFFF" : "inherit"}}>
             <div className="button-container">

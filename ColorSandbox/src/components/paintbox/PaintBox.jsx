@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./PaintBox.scss";
 import Color from "../color/Color";
 
-export default function PaintBox({myColorData}) {
+export default function PaintBox({myColorData, setUserAddedColors}) {
     const [clickPaintBox, setClickPaintBox] = useState(false);
     
     function handleClickGetPaintBox() {
@@ -10,8 +10,8 @@ export default function PaintBox({myColorData}) {
     }
     
     const mapColors = myColorData.map(color => {
-        console.log("Color in map function in PaintBox: ", color)
-        return <Color key={color.id} id={color.id} color={color.hex} />
+        // console.log("Color in map function in PaintBox: ", color)
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     });
 
     const showPaintBox = clickPaintBox === true ? mapColors : "";
