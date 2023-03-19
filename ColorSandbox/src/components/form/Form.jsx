@@ -12,8 +12,16 @@ export default function Form({setUserAddedColors}) {
         const hashHex = "#" + inputColor;
         const newColor = {id: nanoid(), hex: hashHex};
         setSubmittedColor(newColor);
-        setUserAddedColors(prevState => {
-            return [...prevState, newColor];
+        setUserAddedColors(prevColors => {
+
+            const look = prevColors.find(prevColor => prevColor.hex === submittedColor.hex);
+
+            if( look ) {
+                return prevColors;
+            } else {
+                return [...prevColors, newColor];
+            }
+
         });
         clearInput();
     }
