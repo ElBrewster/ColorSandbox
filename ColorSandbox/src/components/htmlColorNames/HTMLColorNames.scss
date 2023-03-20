@@ -1,0 +1,13 @@
+@use "src/index.scss" as *;
+
+.html-paintbox {
+    background-color: $whitePink;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    margin-bottom: .2rem;
+    padding: .3rem;
+}
+
+.get-html-colors {
+    margin-bottom: .2rem;
+}

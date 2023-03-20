@@ -10,3 +10,29 @@
 .color-box:hover{
     border: 3px solid $watermelonDark;
 }
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus-button,
+.minus-button,
+.ghost-button {
+    background-color: inherit;
+    border: none;
+    height: 1rem;
+    padding: 0;
+    width: 1rem;
+}
+
+.plus-button-icon,
+.minus-button-icon, 
+.ghost-button-icon {
+    color: $watermelon;
+    display: block;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 1rem;
+}

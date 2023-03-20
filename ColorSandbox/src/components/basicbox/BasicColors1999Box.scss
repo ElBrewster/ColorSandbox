@@ -1,5 +1,12 @@
-
+@use "src/index.scss" as *;
 
 .basic-paintbox {
-    background-color: aqua;
+    background-color: $grayPurpleOrBlue;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    padding: .3rem;
+}
+
+.get-basic-colors {
+    margin-bottom: .2rem;
 }

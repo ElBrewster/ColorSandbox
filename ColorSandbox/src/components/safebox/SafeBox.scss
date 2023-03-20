@@ -1,5 +1,12 @@
-
+@use "src/index.scss" as *;
 
 .safe-paintbox {
-    background-color: mediumturquoise;
+    background-color: $carefreeBlue;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    padding: .3rem;
+}
+
+.get-really-safe-colors {
+    margin-bottom: .2rem;
 }

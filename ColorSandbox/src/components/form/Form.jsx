@@ -12,8 +12,13 @@ export default function Form({setUserAddedColors}) {
         const hashHex = "#" + inputColor;
         const newColor = {id: nanoid(), hex: hashHex};
         setSubmittedColor(newColor);
-        setUserAddedColors(prevState => {
-            return [...prevState, newColor];
+        setUserAddedColors(prevColors => {
+            const look = prevColors.find(prevColor => prevColor.hex === submittedColor.hex);
+            if( look ) {
+                return prevColors;
+            } else {
+                return [...prevColors, newColor];
+            }
         });
         clearInput();
     }
@@ -25,6 +30,7 @@ export default function Form({setUserAddedColors}) {
 
     function clearInput() {
         console.log("")
+//don't forget to add clear form functionality!
     }
 
     return(
@@ -46,7 +52,7 @@ export default function Form({setUserAddedColors}) {
                 </div>
                 <button className="submit-button">Add One</button>
                 <div className="color-preview">
-                    <Color id={submittedColor.id} color={submittedColor.hex}/>
+                    <Color key={submittedColor.id} id={submittedColor.id} color={submittedColor.hex} setUserAddedColors={setUserAddedColors}/>
                 </div>
             </form>
     );

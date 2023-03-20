@@ -1,1 +1,14 @@
 @use "src/index.scss" as *;
+
+
+.my-paint-box {
+    background-color: $whitePink;
+    border: $pinkBorder;
+    border-radius: $smallBorderRadius;
+    // margin-bottom: .2rem;
+    padding: .3rem;
+}
+
+.get-my-colors {
+    margin-bottom: .2rem;
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Color from "../color/Color";
 import "./SafeBox.scss";
 
-export default function SafeBox({mySafeColors}) {
+export default function SafeBox({mySafeColors, setUserAddedColors}) {
     const [clickSafe, setClickSafe] = useState(false);
 
     function handleClickGetSafeColors() {
@@ -10,7 +10,7 @@ export default function SafeBox({mySafeColors}) {
     }
 
     const mapSafeColors = mySafeColors.map(color => {
-        return <Color key={color.id} color={color.hex} />
+        return <Color key={color.id} id={color.id} color={color.hex} setUserAddedColors={setUserAddedColors}/>
     });
 
     const showMySafeColors = clickSafe === true ? mapSafeColors : "";
