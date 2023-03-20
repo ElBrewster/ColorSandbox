@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .color-boxes-wrapper {
   display: grid;
   gap: .5rem
@@ -40,6 +41,20 @@
 }
 
 //---Media-Queries----
+@media (max-width: 500px) {
+  .top-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .window-sizer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    justify-content: space-between;
+    max-width: 150px;
+  }
+}
 @media (max-width: 300px) {
   .top-container {
     display: flex;

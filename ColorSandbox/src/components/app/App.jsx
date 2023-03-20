@@ -18,13 +18,15 @@ import HTMLColors from '../htmlColorNames/HTMLColorNames';
 
 export default function App() {
   const [randomColor, setRandomColor] = useState("");
-  //add functionality to provide all available color hex data to the random color generator
   const [myColorData] = useState(elColors);
   const [myBasicColors1999] = useState(basicColors1999);
   const [mySafeColors] = useState(webSafe216Colors);
   const [myReallySafeColors] = useState(reallySafeColors);
   const [myHTMLColors] = useState(htmlColorNames140)
   const [userAddedColors, setUserAddedColors] = useState(() => JSON.parse(localStorage.getItem("userAddedColors")) || []);
+  const [allStateColors, setAllStateColors] = useState([...myColorData, ...myBasicColors1999, ...mySafeColors, ...myReallySafeColors, ...myHTMLColors, ...userAddedColors]);
+
+  //use setAllStateColors to add in new sumbissions
 
   useEffect(() => {
     localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors))
@@ -34,7 +36,7 @@ export default function App() {
     <div className="App">
         <div className="top-container">
           <div className="random-color-wrapper">
-            <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} myColorData={myColorData} setUserAddedColors={setUserAddedColors}/>  
+            <RandomBox setRandomColor={setRandomColor} randomColor={randomColor} allStateColors={allStateColors} setUserAddedColors={setUserAddedColors}/>  
           </div>
           <div className="form-wrapper">
             <Form userAddedColors={userAddedColors} setUserAddedColors={setUserAddedColors}/>

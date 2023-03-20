@@ -19,16 +19,28 @@
     opacity: .8;
 }
 
-@media (max-width: 280px) {
+@media (max-width: 500px) {
     .my-header {
         width: 11rem;
     }
 
     .my-h1 {
         font-size: 1.5rem;
+        padding-left: .2rem;
     }
-
+    
 }
+
+// @media (max-width: 280px) {
+//     .my-header {
+//         width: 11rem;
+//     }
+
+//     .my-h1 {
+//         font-size: 1.5rem;
+//     }
+
+// }
 
 @media (max-width: 200px) {
     .my-header {
