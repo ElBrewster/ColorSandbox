@@ -1,13 +1,13 @@
-# **Color Sandbox** ✂
+# **Color Sandbox**
+
+### Preview
+<img width="858" alt="colorsandbox-screenshot" src="https://user-images.githubusercontent.com/113723085/226443365-1576a432-6bde-4325-831c-5c3f5395945c.png">
 
 ## **Overview**
 This is a fun little project I did over my break to review React fundamentals. I gathered hex code color data and set it up in files for a front-end UI intensive app experience. My goal was to get more comfortable handling state, local storage, conditional rendering, and to do a CSS review on responsive layouts. Since I made this app for myself for fun, I thought about how I might use it when designing other websites as a color picking aide for new palettes. The Sandbox container will be great for assessing color palettes with the Colorblindly Chrome add-on, and then with the Randomizer I can get ideas from a pre-set collection of 450 colors.
 
 ### Deployed App
 Visit my app [here](https://color-sandbox.vercel.app/).
-
-### Screenshots
-<img width="858" alt="colorsandbox-screenshot" src="https://user-images.githubusercontent.com/113723085/226443365-1576a432-6bde-4325-831c-5c3f5395945c.png">
 
 ### Setup & Installation
 1. [Click](https://github.com/ElBrewster/Classic-Fit) to open repo 
