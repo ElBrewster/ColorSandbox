@@ -8,7 +8,7 @@ export default function RandomBox({setRandomColor, randomColor, allStateColors, 
         const indexNum = Math.floor(Math.random() * allStateColors.length)
         const oneColor = allStateColors.at(indexNum);
         setRandomColor(oneColor);
-        console.log("oneColor", oneColor)
+        console.log("random color:", oneColor)
     }
 
     return(
