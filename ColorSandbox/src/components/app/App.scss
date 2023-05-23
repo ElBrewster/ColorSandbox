@@ -53,7 +53,6 @@
     flex-direction: column;
     gap: 0.1rem;
     justify-content: space-between;
-    // max-width: 150px;
   }
 }
 
@@ -94,11 +93,13 @@
     flex-direction: column;
     gap: 0.1rem;
     justify-content: space-between;
+    max-width: 90vw;
   }
 }
 
 @media (max-width: 156px) {
   .window-sizer-wrapper {
     font-size: 0.9rem;
+    max-width: 70vw;
   }
 }
