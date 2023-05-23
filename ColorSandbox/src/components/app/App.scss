@@ -53,7 +53,7 @@
     flex-direction: column;
     gap: 0.1rem;
     justify-content: space-between;
-    max-width: 150px;
+    // max-width: 150px;
   }
 }
 
@@ -74,10 +74,11 @@
   }
   .window-sizer-wrapper {
     grid-area: sizer;
+    min-width: 90vw;
   }
 }
 
-@media (max-width: 270px) {
+@media (max-width: 290px) {
   .top-container {
     align-items: flex-start;
     display: flex;
@@ -93,7 +94,6 @@
     flex-direction: column;
     gap: 0.1rem;
     justify-content: space-between;
-    max-width: 160px;
   }
 }
 

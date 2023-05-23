@@ -22,13 +22,40 @@
   .window-size-box {
     display: flex;
     flex-direction: row;
+    font-size: medium;
     justify-content: space-between;
-    min-width: 90vw;
+    padding: 0.4rem;
   }
 }
 
-@media (max-width: 270px) {
+@media (max-width: 390px) {
   .window-size-box {
-    flex: 1;
+    display: grid;
+    font-size: medium;
+    grid-template-areas:
+      "sizer sizer sizer"
+      "height width empty";
+    justify-content: space-between;
+  }
+  .sizer {
+    grid-area: sizer;
+  }
+  .window-height {
+    grid-area: height;
+  }
+  .window-width {
+    grid-area: width;
+  }
+}
+
+@media (max-width: 300px) {
+  .window-size-box {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .window-size-box {
+    font-size: smaller;
   }
 }
