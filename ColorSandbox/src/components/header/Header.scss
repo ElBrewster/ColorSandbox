@@ -1,63 +1,63 @@
 @use "src/index.scss" as *;
 
 .my-header {
-    align-self: start;
-    background-color: rgb(255, 102, 102, .5);
-    border: $pinkBorder;
-    width: 15rem;
+  align-self: start;
+  background-color: rgb(255, 102, 102, 0.5);
+  border: $pinkBorder;
+  width: 15rem;
 }
 
 .h1-wrapper {
-    background-color: $chrysanthemumWhite;
-    border: $pinkBorder;
-    margin: .3rem;
+  background-color: $chrysanthemumWhite;
+  border: $pinkBorder;
+  margin: 0.3rem;
 }
 
 .my-h1 {
-    font-size: 300, 1;
-    padding-left: .5rem;
-    opacity: .8;
+  font-size: 300, 1;
+  padding-left: 0.5rem;
+  opacity: 0.8;
 }
 
 @media (max-width: 500px) {
-    .my-header {
-        width: 11rem;
-    }
+  .my-header {
+    width: 11rem;
+  }
 
-    .my-h1 {
-        font-size: 1.5rem;
-        padding-left: .2rem;
-    }
-    
+  .my-h1 {
+    font-size: 1.5rem;
+    padding-left: 0.2rem;
+  }
 }
 
-// @media (max-width: 280px) {
-//     .my-header {
-//         width: 11rem;
-//     }
+@media (max-width: 433px) {
+  .my-header {
+    width: 90vw;
+  }
+}
 
-//     .my-h1 {
-//         font-size: 1.5rem;
-//     }
-
-// }
+@media (max-width: 250) {
+  .my-header {
+    width: 9rem;
+  }
+}
 
 @media (max-width: 200px) {
-    .my-header {
-        width: 9rem;
-    }
+  .my-header {
+    width: 9rem;
+  }
 
-    .my-h1 {
-        font-size: 1.2rem;
-    }
+  .my-h1 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 174px) {
-    .my-header {
-        width: 7rem;
-    }
+  .my-header {
+    width: 7rem;
+  }
 
-    .my-h1 {
-        font-size: .9rem;
-    }
+  .my-h1 {
+    font-size: 0.9rem;
+  }
 }
