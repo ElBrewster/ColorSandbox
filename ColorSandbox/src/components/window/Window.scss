@@ -1,19 +1,34 @@
 @use "src/index.scss" as *;
 
-.window-size-box{
-    background-color: $skinnyPeach;
-    border: $pinkBorder;
-    border-radius: $smallBorderRadius;
-    color: $watermelonDarker;
-    padding: $defaultPadding;
+.window-size-box {
+  background-color: $skinnyPeach;
+  border: $pinkBorder;
+  border-radius: $smallBorderRadius;
+  color: $watermelonDarker;
+  padding: $defaultPadding;
 }
 
 .window-height,
-.window-width{
-    color: $watermelonGrayCreep;
+.window-width {
+  color: $watermelonGrayCreep;
 }
 
-.px-span{
-    color: $watermelon;
-    opacity: .8;
+.px-span {
+  color: $watermelon;
+  opacity: 0.8;
+}
+
+@media (max-width: 433px) {
+  .window-size-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 90vw;
+  }
+}
+
+@media (max-width: 270px) {
+  .window-size-box {
+    flex: 1;
+  }
 }
