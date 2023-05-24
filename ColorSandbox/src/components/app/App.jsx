@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./App.scss";
 import elColors from "../../data/elColors";
 import basicColors1999 from "../../data/basicColors1999";
