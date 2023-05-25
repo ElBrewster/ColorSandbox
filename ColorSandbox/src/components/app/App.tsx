@@ -26,7 +26,7 @@ export default function App() {
   const [userAddedColors, setUserAddedColors] = useState(
     () => JSON.parse(localStorage.getItem("userAddedColors")) || []
   );
-  const [allStateColors, setAllStateColors] = useState([
+  const [allStateColors] = useState([
     ...myColorData,
     ...myBasicColors1999,
     ...mySafeColors,
@@ -35,11 +35,10 @@ export default function App() {
     ...userAddedColors,
   ]);
 
-  //use setAllStateColors to add in new sumbissions
-
   useEffect(() => {
     localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors));
   }, [userAddedColors]);
+  console.log({ userAddedColors });
 
   return (
     <div className="App">
@@ -51,12 +50,10 @@ export default function App() {
             allStateColors={allStateColors}
             setUserAddedColors={setUserAddedColors}
           />
+          <button>toggle gray context</button>
         </div>
         <div className="form-wrapper">
-          <Form
-            userAddedColors={userAddedColors}
-            setUserAddedColors={setUserAddedColors}
-          />
+          <Form setUserAddedColors={setUserAddedColors} />
         </div>
         <div className="window-sizer-wrapper">
           <Window />
