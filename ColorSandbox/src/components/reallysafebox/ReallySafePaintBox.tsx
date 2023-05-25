@@ -2,10 +2,15 @@ import { useState } from "react";
 import Color from "../color/Color";
 import "./ReallySafePaintBox.scss";
 
+type ReallySafeProps = {
+  myReallySafeColors: object[];
+  setUserAddedColors: Function;
+};
+
 export default function ReallySafePaintBox({
   myReallySafeColors,
   setUserAddedColors,
-}) {
+}: ReallySafeProps) {
   const [clickReallySafe, setClickReallySafe] = useState(false);
 
   function handleClickGetReallySafeColors() {

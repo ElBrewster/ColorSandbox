@@ -2,10 +2,15 @@ import { useState } from "react";
 import Color from "../color/Color";
 import "./BasicColors1999Box.scss";
 
+type BC1999BoxProps = {
+  myBasicColors1999: object[];
+  setUserAddedColors: Function;
+};
+
 export default function BasicColors1999Box({
   myBasicColors1999,
   setUserAddedColors,
-}) {
+}: BC1999BoxProps) {
   const [clickBasic, setClickBasic] = useState(false);
 
   function handleClickGetBasicColors() {

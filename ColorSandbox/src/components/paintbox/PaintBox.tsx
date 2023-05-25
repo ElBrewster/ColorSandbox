@@ -2,7 +2,15 @@ import { useState } from "react";
 import "./PaintBox.scss";
 import Color from "../color/Color";
 
-export default function PaintBox({ myColorData, setUserAddedColors }) {
+type PaintBoxProps = {
+  myColorData: object[];
+  setUserAddedColors: Function;
+};
+
+export default function PaintBox({
+  myColorData,
+  setUserAddedColors,
+}: PaintBoxProps) {
   const [clickPaintBox, setClickPaintBox] = useState(false);
 
   function handleClickGetPaintBox() {

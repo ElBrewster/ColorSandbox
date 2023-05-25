@@ -40,6 +40,7 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("userAddedColors", JSON.stringify(userAddedColors));
   }, [userAddedColors]);
+  console.log({ userAddedColors });
 
   return (
     <div className="App">

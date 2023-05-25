@@ -2,7 +2,15 @@ import { useState } from "react";
 import Color from "../color/Color";
 import "./SandBox.scss";
 
-export default function SandBox({ userAddedColors, setUserAddedColors }) {
+type SandBoxProps = {
+  userAddedColors: object[];
+  setUserAddedColors: Function;
+};
+
+export default function SandBox({
+  userAddedColors,
+  setUserAddedColors,
+}: SandBoxProps) {
   const [currentSandBox] = useState(userAddedColors);
 
   const mySandBoxColors = userAddedColors.map((color) => {

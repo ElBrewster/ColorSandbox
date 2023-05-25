@@ -2,7 +2,15 @@ import { useState } from "react";
 import Color from "../color/Color";
 import "./SafeBox.scss";
 
-export default function SafeBox({ mySafeColors, setUserAddedColors }) {
+type SafeProps = {
+  mySafeColors: object[];
+  setUserAddedColors: Function;
+};
+
+export default function SafeBox({
+  mySafeColors,
+  setUserAddedColors,
+}: SafeProps) {
   const [clickSafe, setClickSafe] = useState(false);
 
   function handleClickGetSafeColors() {

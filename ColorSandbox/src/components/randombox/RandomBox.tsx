@@ -1,12 +1,19 @@
 import "./RandomBox.scss";
 import Color from "../color/Color";
 
+type RandomBoxProps = {
+  setRandomColor: Function;
+  randomColor: string;
+  allStateColors: object[];
+  setUserAddedColors: Function;
+};
+
 export default function RandomBox({
   setRandomColor,
   randomColor,
   allStateColors,
   setUserAddedColors,
-}) {
+}: RandomBoxProps) {
   function handleClickRandom() {
     const indexNum = Math.floor(Math.random() * allStateColors.length);
     const oneColor = allStateColors.at(indexNum);
