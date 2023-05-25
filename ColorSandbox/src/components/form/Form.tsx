@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { FormEventHandler, HTMLInputTypeAttribute, useState } from "react";
 import "./Form.scss";
 import { nanoid } from "nanoid";
 import Color from "../color/Color";
 
-export default function Form({ setUserAddedColors }) {
+type FormProps = {
+  setUserAddedColors: Function;
+};
+
+export default function Form({ setUserAddedColors }: FormProps) {
   const [inputColor, setInputColor] = useState("");
   const [submittedColor, setSubmittedColor] = useState("");
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const hashHex = "#" + inputColor;
     const newColor = { id: nanoid(), hex: hashHex };
@@ -25,7 +29,7 @@ export default function Form({ setUserAddedColors }) {
     clearInput();
   }
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const result = e.target.value.replace(/[^a-z0-9]/gi, "");
     setInputColor(result);
   }

@@ -7,14 +7,10 @@ type ColorProps = {
   color: string;
   id: number;
   setUserAddedColors: Function;
-  currentSandBox: object[];
+  // currentSandBox: object[];
 };
-export default function Color({
-  color,
-  id,
-  setUserAddedColors,
-  currentSandBox,
-}: ColorProps) {
+
+export default function Color({ color, id, setUserAddedColors }: ColorProps) {
   const [myHover, setMyHover] = useState(false);
   const [myClick, setMyClick] = useState(false);
   const [ghostClick, setMyGhostClick] = useState(false);
@@ -92,14 +88,14 @@ export default function Color({
     });
   };
 
-  const checkSandBoxColor = () => {
-    const check = currentSandBox.find(
-      (sandBoxColor) => sandBoxColor.hex === color
-    );
-    if (check) {
-      setMyAdd(false);
-    }
-  };
+  // const checkSandBoxColor = () => {
+  //   const check = currentSandBox.find(
+  //     (sandBoxColor) => sandBoxColor.hex === color
+  //   );
+  //   if (check) {
+  //     setMyAdd(false);
+  //   }
+  // };
   //I think I need an additional way of maintaining state for the plus/minus rendering, since it's gotten complicated after I add a color to the sandbox. How do I have it recognize where it's being rendered and that a different state applies since it needs to be rendered with the toggle disabled?
   return (
     <div
