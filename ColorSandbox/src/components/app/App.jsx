@@ -51,6 +51,7 @@ export default function App() {
             allStateColors={allStateColors}
             setUserAddedColors={setUserAddedColors}
           />
+          <button>toggle gray context</button>
         </div>
         <div className="form-wrapper">
           <Form
