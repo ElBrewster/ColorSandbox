@@ -51,7 +51,7 @@ export default function Color({ color, id, setUserAddedColors }: ColorProps) {
     }
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (myClick) {
       return;

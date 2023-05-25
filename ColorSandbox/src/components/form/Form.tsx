@@ -1,4 +1,4 @@
-import { FormEventHandler, HTMLInputTypeAttribute, useState } from "react";
+import { useState } from "react";
 import "./Form.scss";
 import { nanoid } from "nanoid";
 import Color from "../color/Color";
