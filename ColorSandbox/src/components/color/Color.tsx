@@ -3,12 +3,18 @@ import { BiGhost, BiPlus, BiMinus } from "react-icons/bi";
 //Determine whether to display something when no color is rendered? a boo box? Add a 'boo' button to form display that will make a list in local storage that cannot be deleted, and user is prevented from entering those combos
 import "./Color.scss";
 
+type ColorProps = {
+  color: string;
+  id: number;
+  setUserAddedColors: Function;
+  currentSandBox: object[];
+};
 export default function Color({
   color,
   id,
   setUserAddedColors,
   currentSandBox,
-}) {
+}: ColorProps) {
   const [myHover, setMyHover] = useState(false);
   const [myClick, setMyClick] = useState(false);
   const [ghostClick, setMyGhostClick] = useState(false);
